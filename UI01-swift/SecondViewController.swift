@@ -14,7 +14,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor .blueColor()
         self.title                = "第二个"
-        self .initUI()
+        self.initUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,18 +22,30 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func initUI(){
-        let button = UIButton()
-        button.frame = CGRectMake(0, 200, 300, 200)
-        button.backgroundColor = UIColor.grayColor()
-        button .setTitle("change", forState: UIControlState.Normal)
-        button .addTarget(self, action:"changeBackGroundColor:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        //TODO: 创建UIbutton
+        let button                      = UIButton()
+        button.frame                    = CGRectMake(0, 200, 300, 200)
+        button.backgroundColor          = UIColor.grayColor()
+        button.setTitle("change", forState: UIControlState.Normal)
+        button.addTarget(self, action:"changeBackGroundColor:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view .addSubview(button)
+
+        //TODO: 创建UILabel
+        let label                       = UILabel ()
+        label.frame                     = CGRectMake(80, 64, 100, 50)
+        label.text                      = "嘿嘿"
+        label.textAlignment             = NSTextAlignment.Center
+        label.adjustsFontSizeToFitWidth = true
+        label.backgroundColor           = UIColor.lightGrayColor()
+        self.view.addSubview(label)
     
     }
 
     func changeBackGroundColor(button:UIButton!){
 
         self.view.backgroundColor = UIColor.brownColor()
+        
     }
     
 
