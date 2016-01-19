@@ -19,7 +19,21 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    //FIXME: ButtonClick
+    @IBAction func btnClick(sender: UIButton) {
+        let secondVc = SecondViewController()
+        //FIXME: 模态弹出
+//        presentViewController(secondVc, animated: true) { () -> Void in
+        //FIXME: push
+        self.navigationController?.pushViewController(secondVc, animated: true)
+        }
+    
+    }
+    
 
 
-}
+
+
 
