@@ -13,12 +13,27 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor .blueColor()
-        self.title = "第二个"
+        self.title                = "第二个"
+        self .initUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func initUI(){
+        let button = UIButton()
+        button.frame = CGRectMake(0, 200, 300, 200)
+        button.backgroundColor = UIColor.grayColor()
+        button .setTitle("change", forState: UIControlState.Normal)
+        button .addTarget(self, action:"changeBackGroundColor:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view .addSubview(button)
+    
+    }
+
+    func changeBackGroundColor(button:UIButton!){
+
+        self.view.backgroundColor = UIColor.brownColor()
     }
     
 
